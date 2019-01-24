@@ -14,7 +14,7 @@ function mark_size(i)
 end
 
 function line_style(i)
-	line_styles = ["solid" "dashed" "dotted" "dashdotted" "densly dotted" "loosly dotted" "densly dashed" "loosley dashed"]
+	line_styles = ["solid" "dotted" "densely dotted" "loosely dotted" "dashed" "densely dashed" "loosely dashed" "dashdotted" "densely dashdotted" "loosely dashdotted"]
 	n = length(line_styles)
 	line_styles[mod(i - 1, n) + 1]
 end
@@ -103,7 +103,7 @@ function preamble()
 
 	# macros
 	for file in ["triangle" "square" "cube"]
-		@show s = open(string("src/", file, ".txt")) do file
+		s = open(joinpath(dirname(pathof(Reporter)), string(file, ".txt"))) do file
 			read(file, String)
 		end
 		push!(p, s)

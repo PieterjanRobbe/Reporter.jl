@@ -88,7 +88,6 @@ function get_rate_in_direction(h, idx, cntr, rate_symbol)
 	y = Vector{Float64}(undef, 0)
 	while cntr*idx ∈ h[:index_set] 
 		push!(x, cntr)
-		@show h[rate_symbol]
 		push!(y, log2(abs(h[rate_symbol][cntr*idx])))
 		cntr += 1
 	end
@@ -150,7 +149,7 @@ function make_figure_index_sets(h, folder)
 	m = maximum(maximum(h[:index_set]).I) + 1.1
 	@pgf gp = GroupPlot({group_style = {group_size = "2 by $nrows"}})
 	for tol in 1:length(h)
-		@pgf push!(gp, {index_set_2d..., xmax = m, ymax = m, xlabel = string("\\Large\$\\varepsilon = \$", @sprintf("%4.3e", h[tol][:tol]))})
+		@pgf push!(gp, {index_set_2d..., xmax = m, ymax = m, xlabel = string("\\Large\$\\varepsilon = \$ ", @sprintf("%4.3e", h[tol][:tol]))})
 		for index in h[tol][:current_index_set]
 			push!(gp, string("\\drawsquare{", index[1], "}{", index[2], "}{white!90!black}"))
 		end

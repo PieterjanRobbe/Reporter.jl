@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+\begin{axis}[ticklabel style={{font=\small}}, major tick length={2pt}, every tick/.style={{black, line cap=round}}, axis on top, legend style={{draw=none, font=\small, at={(0.03,0.03)}, anchor=south west, fill=none, legend cell align=left}}, xlabel={$\ell$}, xtick distance={1}, ylabel={$\log_2(\mathbb{E}[|\;\cdot\;|])$}]
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}]
+        table[row sep={\\}]
+        {
+            \\
+            0.0  -3.1410879125845024  \\
+            1.0  -3.0582031485720105  \\
+        }
+        ;
+    \addlegendentry {$Q_{(\ell, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}, style={dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -7.991670423925453  \\
+            2.0  -10.246451380340027  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, 0)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}, style={densely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -8.168878584237397  \\
+            2.0  -9.231118285151963  \\
+            3.0  -10.472815058054755  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(0, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}, style={loosely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -9.738439402220466  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, \ell)}$}
+\end{axis}
+\end{tikzpicture}
