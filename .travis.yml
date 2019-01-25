@@ -2,7 +2,7 @@
 language: julia
 os:
   - linux
-  - osx
+    #  - osx
 julia:
   - 0.7
   - 1.0
@@ -19,7 +19,7 @@ before_install:
   - docker pull tkpapp/texlive-julia-minimal
 
 before_script:
-    - julia -e 'import Pkg; Pkg.build(); Pkg.add("https://github.com/PieterjanRobbe/SimpleMultigrid.jl.git"); Pkg.add("https://github.com/PieterjanRobbe/NotSoSimpleMultigrid.jl.git"); Pkg.add("https://github.com/PieterjanRobbe/LognormalDiffusionProblems.jl.git")'
+    - julia -e 'import Pkg; Pkg.build(); Pkg.clone("https://github.com/PieterjanRobbe/SimpleMultigrid.jl.git"); Pkg.clone("https://github.com/PieterjanRobbe/NotSoSimpleMultigrid.jl.git"); Pkg.clone("https://github.com/PieterjanRobbe/LognormalDiffusionProblems.jl.git")'
 env:
   - PYTHON=""
 script:
