@@ -18,8 +18,8 @@ before_install:
   - echo "**** pulling Docker image"
   - docker pull tkpapp/texlive-julia-minimal
 
-beforer_ script:
-    - julia -e 'using Pkg; Pkg.add("https://github.com/PieterjanRobbe/SimpleMultigrid.jl.git"); Pkg.add("https://github.com/PieterjanRobbe/NotSoSimpleMultigrid.jl.git"); Pkg.add("https://github.com/PieterjanRobbe/LognormalDiffusionProblems.jl.git")'
+before_script:
+    - julia -e 'import Pkg; Pkg.build(); Pkg.add("https://github.com/PieterjanRobbe/SimpleMultigrid.jl.git"); Pkg.add("https://github.com/PieterjanRobbe/NotSoSimpleMultigrid.jl.git"); Pkg.add("https://github.com/PieterjanRobbe/LognormalDiffusionProblems.jl.git")'
 env:
   - PYTHON=""
 script:
