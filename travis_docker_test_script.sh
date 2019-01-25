@@ -9,4 +9,4 @@ JULIABIN=/test/julia-$JULIAVER/bin/julia
 cd /mnt && if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
 
 # run tests
-$JULIABIN -e "import Pkg; Pkg.build(); Pkg.test(; coverage=true)"
+$JULIABIN -e "using Pkg; Pkg.test(; coverage=true)"
