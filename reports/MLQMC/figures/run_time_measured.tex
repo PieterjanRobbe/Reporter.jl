@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\begin{axis}[ticklabel style={{font=\small}}, major tick length={2pt}, every tick/.style={{black, line cap=round}}, axis on top, legend style={{draw=none, font=\small, at={(0.03,0.03)}, anchor=south west, fill=none, legend cell align=left}}, xmode={log}, ymode={log}, legend style={{draw=none, font=\small, at={(0.97,0.97)}, anchor=north east, fill=none, legend cell align=left}}, xlabel={measured rmse $\varepsilon$}, ylabel={total run time}]
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={blue}]
+        table[row sep={\\}]
+        {
+            \\
+            0.007589893205074367  2.10599795  \\
+            0.007589893205074367  2.107209721  \\
+            0.0062037568805486335  2.2137579109999996  \\
+            0.0045313451750914596  2.3129096329999994  \\
+            0.0032911284943509893  2.4151933629999993  \\
+            0.0027013385688312475  2.4251982989999994  \\
+            0.0019905390450324556  4.421807407999999  \\
+            0.0012479495938888074  7.067561562  \\
+            0.0012479495938888074  7.0754166199999995  \\
+            0.0007668837122423545  17.978044137999998  \\
+        }
+        ;
+    \littletriangle{2};
+\end{axis}
+\end{tikzpicture}

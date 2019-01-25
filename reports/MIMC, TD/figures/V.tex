@@ -1,0 +1,51 @@
+\begin{tikzpicture}
+\begin{axis}[ticklabel style={{font=\small}}, major tick length={2pt}, every tick/.style={{black, line cap=round}}, axis on top, legend style={{draw=none, font=\small, at={(0.03,0.03)}, anchor=south west, fill=none, legend cell align=left}}, xlabel={$\ell$}, xtick distance={1}, ylabel={$\log_2(\mathbb{V}[\;\cdot\;])$}]
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={blue}]
+        table[row sep={\\}]
+        {
+            \\
+            0.0  -5.546392336429405  \\
+            1.0  -5.578202727544854  \\
+            2.0  -5.380742493401862  \\
+            3.0  -7.742645742349176  \\
+        }
+        ;
+    \addlegendentry {$Q_{(\ell, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={blue}, style={dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -11.180512137940937  \\
+            2.0  -14.083844603769444  \\
+            3.0  -17.781028360168815  \\
+            4.0  -23.18098130325784  \\
+            5.0  -33.813484364738834  \\
+            6.0  -38.37461817069976  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, 0)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={blue}, style={densely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -10.925714790975409  \\
+            2.0  -13.936273433544661  \\
+            3.0  -18.519808839821646  \\
+            4.0  -30.0519535574914  \\
+            5.0  -40.05918747585897  \\
+            6.0  -37.38880649534077  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(0, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={blue}, style={loosely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -10.786883887221547  \\
+            2.0  -14.09480150433578  \\
+            3.0  -24.988311566863892  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, \ell)}$}
+\end{axis}
+\end{tikzpicture}

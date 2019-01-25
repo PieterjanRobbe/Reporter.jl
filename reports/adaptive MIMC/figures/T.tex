@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+\begin{axis}[ticklabel style={{font=\small}}, major tick length={2pt}, every tick/.style={{black, line cap=round}}, axis on top, legend style={{draw=none, font=\small, at={(0.03,0.03)}, anchor=south west, fill=none, legend cell align=left}}, xlabel={$\ell$}, xtick distance={1}, ylabel={$\log_2(\textrm{time}(\;\cdot\;))$}, legend style={{draw=none, font=\small, at={(0.03,0.97)}, anchor=north west, fill=none, legend cell align=left}}]
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={orange}, style={dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            0.0  -12.469364456845486  \\
+            1.0  -10.951166428699052  \\
+            2.0  -9.529468807692039  \\
+            3.0  -7.940631949822219  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, 0)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={orange}, style={densely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            0.0  -12.469364456845486  \\
+            1.0  -10.925441351601085  \\
+            2.0  -9.701472510963344  \\
+            3.0  -7.886464331543934  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(0, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={orange}, style={loosely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            0.0  -12.469364456845486  \\
+            1.0  -9.61091416063876  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, \ell)}$}
+\end{axis}
+\end{tikzpicture}

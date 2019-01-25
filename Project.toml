@@ -15,9 +15,3 @@ PGFPlotsX = "8314cec4-20b6-5062-9cdb-752b83310925"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 SimpleMultigrid = "e8fea2e7-436f-5c48-8914-48864cfb6713"
-
-[extras]
-LognormalDiffusionproblems = "84461a34-18b6-11e9-063f-531b55a55ae0"
-
-[targets]
-test = ["LognormalDiffusionproblems"]

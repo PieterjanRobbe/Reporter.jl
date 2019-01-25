@@ -1,0 +1,114 @@
+\begin{tikzpicture}
+\begin{axis}[ticklabel style={{font=\small}}, major tick length={2pt}, every tick/.style={{black, line cap=round}}, axis on top, legend style={{draw=none, font=\small, at={(0.03,0.03)}, anchor=south west, fill=none, legend cell align=left}}, xlabel={$\ell$}, xtick distance={1}, ylabel={$N_\ell$}, ymode={log}, legend style={{draw=none, font=\small, at={(0.97,0.97)}, anchor=north east, fill=none, legend cell align=left}}]
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.5;green,0.0;blue,0.0}]
+        table[row sep={\\}]
+        {
+            \\
+            0  32830  \\
+            1  2654  \\
+            2  347  \\
+            3  4  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$1.000e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.9444444444444446;green,0.0;blue,0.0}]
+        table[row sep={\\}]
+        {
+            \\
+            0  20666  \\
+            1  1853  \\
+            2  347  \\
+            3  3  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$1.300e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,1.0;green,0.38888888888888884;blue,0.0}]
+        table[row sep={\\}]
+        {
+            \\
+            0  11201  \\
+            1  1193  \\
+            2  52  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$1.690e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,1.0;green,0.8333333333333335;blue,0.0}]
+        table[row sep={\\}]
+        {
+            \\
+            0  6804  \\
+            1  850  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$2.197e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.7222222222222223;green,1.0;blue,0.2777777777777777}]
+        table[row sep={\\}]
+        {
+            \\
+            0  3671  \\
+            1  430  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$2.856e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.2777777777777777;green,1.0;blue,0.7222222222222223}]
+        table[row sep={\\}]
+        {
+            \\
+            0  2182  \\
+            1  317  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$3.713e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.0;green,0.8333333333333333;blue,1.0}]
+        table[row sep={\\}]
+        {
+            \\
+            0  1131  \\
+            1  89  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$4.827e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.0;green,0.38888888888888884;blue,1.0}]
+        table[row sep={\\}]
+        {
+            \\
+            0  491  \\
+            1  44  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$6.275e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.0;green,0.0;blue,0.9444444444444444}]
+        table[row sep={\\}]
+        {
+            \\
+            0  277  \\
+            1  30  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$8.157e-03}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={rgb,1:red,0.0;green,0.0;blue,0.5}]
+        table[row sep={\\}]
+        {
+            \\
+            0  244  \\
+            1  20  \\
+            2  20  \\
+            3  2  \\
+        }
+        ;
+    \addlegendentry {$\varepsilon=$1.060e-02}
+\end{axis}
+\end{tikzpicture}
