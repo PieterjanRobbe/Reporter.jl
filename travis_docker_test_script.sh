@@ -2,6 +2,7 @@
 
 JULIAVER=$1                     # the first and only argument to the script is the version
 JULIABIN=/test/julia-$JULIAVER/bin/julia
+PYTHON=""
 
 ## install the image (when necessary)
 /test/install-julia.sh $JULIAVER
