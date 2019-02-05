@@ -35,8 +35,7 @@ function report(h::History, folder::AbstractString)
 	make_html(h, folder)
 
 	# open html page
-	run(`open $(joinpath(folder, "index.html"))`)
-	
+        try run(`open $(joinpath(folder, "index.html"))`) catch end
 end
 
 end # module
