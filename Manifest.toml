@@ -1,3 +1,5 @@
+# This file is machine-generated - editing it directly is not advised
+
 [[AbstractFFTs]]
 deps = ["Compat", "LinearAlgebra"]
 git-tree-sha1 = "8d59c3b1463b5e0ad05a3698167f85fac90e184d"
@@ -57,15 +59,15 @@ version = "0.9.5"
 
 [[Compat]]
 deps = ["Base64", "Dates", "DelimitedFiles", "Distributed", "InteractiveUtils", "LibGit2", "Libdl", "LinearAlgebra", "Markdown", "Mmap", "Pkg", "Printf", "REPL", "Random", "Serialization", "SharedArrays", "Sockets", "SparseArrays", "Statistics", "Test", "UUIDs", "Unicode"]
-git-tree-sha1 = "ec61a16eed883ad0cfa002d7489b3ce6d039bb9a"
+git-tree-sha1 = "49269e311ffe11ac5b334681d212329002a9832a"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
-version = "1.4.0"
+version = "1.5.1"
 
 [[Conda]]
 deps = ["Compat", "JSON", "VersionParsing"]
-git-tree-sha1 = "fb86fe40cb5b35990e368709bfdc1b46dbb99dac"
+git-tree-sha1 = "b625d802587c2150c279a40a646fba63f9bd8187"
 uuid = "8f4d0f93-b110-5947-807f-2305c1781a2d"
-version = "1.1.1"
+version = "1.2.0"
 
 [[Crayons]]
 deps = ["Test"]
@@ -94,7 +96,7 @@ deps = ["Mmap"]
 uuid = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 
 [[Distributed]]
-deps = ["LinearAlgebra", "Random", "Serialization", "Sockets"]
+deps = ["Random", "Serialization", "Sockets"]
 uuid = "8ba89e20-285c-5b6f-9357-94700520ee1b"
 
 [[DocStringExtensions]]
@@ -134,20 +136,20 @@ uuid = "e4b2fa32-6e09-5554-b718-106ed5adafe9"
 version = "1.1.1"
 
 [[InteractiveUtils]]
-deps = ["LinearAlgebra", "Markdown"]
+deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
 
 [[Interpolations]]
 deps = ["AxisAlgorithms", "LinearAlgebra", "OffsetArrays", "Random", "Ratios", "SharedArrays", "SparseArrays", "StaticArrays", "Test", "WoodburyMatrices"]
-git-tree-sha1 = "1ec5b78dbfb5ae2b3d7a4987a9287fed4cc31ded"
+git-tree-sha1 = "e8d1c381b1dc5343e5b6d37265acbe1de493d512"
 uuid = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
-version = "0.11.1"
+version = "0.11.2"
 
 [[IterativeSolvers]]
 deps = ["LinearAlgebra", "Printf", "Random", "RecipesBase", "SparseArrays", "Test"]
-git-tree-sha1 = "a7b8056ecd43aa0d112d4b5d04180194d12c3c62"
+git-tree-sha1 = "5687f68018b4f14c0da54d402bb23eecaec17f37"
 uuid = "42fd0dbc-a981-5370-80f2-aaf504508153"
-version = "0.7.1"
+version = "0.8.1"
 
 [[JLD2]]
 deps = ["CodecZlib", "DataStructures", "FileIO", "LinearAlgebra", "Mmap", "Printf", "Random", "Test"]
@@ -182,7 +184,7 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[LognormalDiffusionProblems]]
 deps = ["Distributed", "FFTW", "GaussianRandomFields", "Interpolations", "MultilevelEstimators", "NotSoSimpleMultigrid", "PaddedViews", "Printf", "Random", "Reexport", "Retry", "SimpleMultigrid", "Statistics"]
-git-tree-sha1 = "13959a34593d06dce8ae1301b577b20cdb604c99"
+git-tree-sha1 = "2424a7530fb869237bf6b2438d9e8e9ab5f475c4"
 repo-rev = "master"
 repo-url = "https://github.com/PieterjanRobbe/LognormalDiffusionProblems.jl.git"
 uuid = "84461a34-18b6-11e9-063f-531b55a55ae0"
@@ -209,15 +211,15 @@ uuid = "a63ad114-7e13-5084-954f-fe012c677804"
 
 [[MultilevelEstimators]]
 deps = ["Dates", "DelimitedFiles", "Distributed", "JLD2", "LinearAlgebra", "Printf", "Random", "SpecialFunctions", "Statistics"]
-git-tree-sha1 = "7d2a5e81c426a33e76a17399e48b6f8210478677"
+git-tree-sha1 = "c5cdbd7110b525eca9f7aabdfef926cdb79bf517"
 repo-rev = "master"
 repo-url = "https://github.com/PieterjanRobbe/MultilevelEstimators.jl.git"
 uuid = "bc769cb7-f249-5bba-802a-80f19cb247ec"
-version = "0.0.0"
+version = "0.1.0"
 
 [[NotSoSimpleMultigrid]]
 deps = ["LinearAlgebra", "Printf", "Requires", "SimpleMultigrid", "SparseArrays", "StaticArrays", "Statistics", "Test"]
-git-tree-sha1 = "81463f2ce31c197f394588e9c5c48ac63ad969c6"
+git-tree-sha1 = "ceecc38cd1c9d9cd145203238f0c7f50220b5af1"
 repo-rev = "master"
 repo-url = "https://github.com/PieterjanRobbe/NotSoSimpleMultigrid.jl.git"
 uuid = "bc769cb7-f249-5bba-802a-79f19cb249ec"
@@ -225,9 +227,9 @@ version = "1.0.0"
 
 [[OffsetArrays]]
 deps = ["DelimitedFiles", "Test"]
-git-tree-sha1 = "7d1442cb06fbfbc4fea936c3c56b38daffd22d3b"
+git-tree-sha1 = "e6893807f09c1d5517861ded8b203cb96cb7d44a"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
-version = "0.9.1"
+version = "0.10.0"
 
 [[OrderedCollections]]
 deps = ["Random", "Serialization", "Test"]
@@ -256,6 +258,12 @@ version = "0.10.3"
 [[Pkg]]
 deps = ["Dates", "LibGit2", "Markdown", "Printf", "REPL", "Random", "SHA", "UUIDs"]
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+
+[[Primes]]
+deps = ["Test"]
+git-tree-sha1 = "ff1a2323cb468ec5f201838fcbe3c232266b1f95"
+uuid = "27ebfcd6-29c5-5fa9-bf4b-fb8fc14df3ae"
+version = "0.4.0"
 
 [[Printf]]
 deps = ["Unicode"]
@@ -289,9 +297,9 @@ version = "0.3.0"
 
 [[RecipesBase]]
 deps = ["Random", "Test"]
-git-tree-sha1 = "b18c3d875ad6805e3db59c4e81f206f04df71d66"
+git-tree-sha1 = "0b3cb370ee4dc00f47f1193101600949f3dcf884"
 uuid = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
-version = "0.5.0"
+version = "0.6.0"
 
 [[Reexport]]
 deps = ["Pkg"]
@@ -307,9 +315,9 @@ version = "0.5.2"
 
 [[Retry]]
 deps = ["Test"]
-git-tree-sha1 = "de2c066886416190da2ab3dbaa0e89e09ccd03c2"
+git-tree-sha1 = "56bfdfca33e70883e96fd398548ebd4d405b41fe"
 uuid = "20febd7b-183b-5ae2-ac4a-720e7ce64774"
-version = "0.3.0"
+version = "0.4.0"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
@@ -322,8 +330,8 @@ deps = ["Distributed", "Mmap", "Random", "Serialization"]
 uuid = "1a1011a3-84de-559e-8e89-a11a2f7dc383"
 
 [[SimpleMultigrid]]
-deps = ["IterativeSolvers", "PaddedViews", "Printf", "Requires", "SparseArrays", "StaticArrays", "Test"]
-git-tree-sha1 = "5ec8b2ecc65432c0a72c2983f848b4749c13ece6"
+deps = ["IterativeSolvers", "LinearAlgebra", "PaddedViews", "Primes", "Printf", "Requires", "SparseArrays", "StaticArrays", "Test"]
+git-tree-sha1 = "900625ba68a28c8c040ea4fe0827b5e59289d049"
 repo-rev = "master"
 repo-url = "https://github.com/PieterjanRobbe/SimpleMultigrid.jl.git"
 uuid = "e8fea2e7-436f-5c48-8914-48864cfb6713"
@@ -381,7 +389,7 @@ uuid = "30578b45-9adc-5946-b283-645ec420af67"
 version = "0.4.0"
 
 [[UUIDs]]
-deps = ["Random"]
+deps = ["Random", "SHA"]
 uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 
 [[Unicode]]
