@@ -22,7 +22,6 @@ sudo: required
 services:
   - docker
 before_install:
-  - sudo apt-get update
   - sudo apt-get install curl
   - echo "**** pulling Docker image"
   - docker pull tkpapp/texlive-julia-minimal
