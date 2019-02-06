@@ -9,6 +9,4 @@ JULIABIN=/test/julia-$JULIAVER/bin/julia
 cd /mnt && if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
 
 # run tests
-PYTHON=""
-PYTHONPATH=""
-$JULIABIN -e 'ENV["PYTHONPATH"]=""; ENV["PYTHON"]=""; using Pkg; Pkg.test(; coverage=true)'
+$JULIABIN -e 'using Pkg; Pkg.test(; coverage=true)'
