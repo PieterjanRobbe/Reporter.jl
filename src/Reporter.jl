@@ -23,7 +23,7 @@ function report(h::History)
 end
 
 function report(h::History, folder::AbstractString)
-	
+
 	# make the required directories
 	!isdir(folder) && mkdir(folder)
 	!isdir(joinpath(folder,"figures")) && mkdir(joinpath(folder,"figures"))
@@ -35,7 +35,7 @@ function report(h::History, folder::AbstractString)
 	make_html(h, folder)
 
 	# open html page
-        try run(`open $(joinpath(folder, "index.html"))`) catch end
+	try run(`open $(joinpath(folder, "index.html"))`) catch end
 end
 
 end # module
