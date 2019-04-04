@@ -188,6 +188,9 @@ end
 function save(folder::AbstractString, filename::AbstractString, figure::PGFPlotsX.AxisLike)
 	isempty(PGFPlotsX.CUSTOM_PREAMBLE) && append!(PGFPlotsX.CUSTOM_PREAMBLE, preamble())
 
-	pgfsave(joinpath(folder, "figures", string(filename, ".pdf")), figure, latex_engine=PGFPlotsX.PDFLATEX)
 	pgfsave(joinpath(folder, "figures", string(filename, ".tex")), figure, include_preamble=false, latex_engine=PGFPlotsX.PDFLATEX)
+	try
+		pgfsave(joinpath(folder, "figures", string(filename, ".pdf")), figure, latex_engine=PGFPlotsX.PDFLATEX)
+	catch e
+	end
 end
