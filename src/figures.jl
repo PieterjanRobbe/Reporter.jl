@@ -97,7 +97,7 @@ end
 function make_figure_samples(h, folder)
 	@pgf figure = Axis({nb_of_samples_axis...})
 	n = length(h)
-	colors = jet(n)
+	colors = jet(max(2, n))
 	for tol in n:-1:1
 		y = filter(i -> i > 0, h[tol][:nb_of_samples])
 		x = 0:length(y)-1
