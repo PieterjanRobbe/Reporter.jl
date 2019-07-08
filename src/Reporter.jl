@@ -22,14 +22,22 @@ function report(h::History)
 	report(h, folder)
 end
 
+<<<<<<< HEAD
 function report(h::History, folder::AbstractString;include_preamble=false)
+=======
+function report(h::History, folder::AbstractString)
+>>>>>>> 80601260bdf66c5941fdadc097a508fbd70e6518
 
 	# make the required directories
 	!isdir(folder) && mkdir(folder)
 	!isdir(joinpath(folder,"figures")) && mkdir(joinpath(folder,"figures"))
 
 	# make the figures
+<<<<<<< HEAD
 	make_figures(h, folder,include_preamble)
+=======
+	make_figures(h, folder)
+>>>>>>> 80601260bdf66c5941fdadc097a508fbd70e6518
 
 	# make the html file
 	make_html(h, folder)
