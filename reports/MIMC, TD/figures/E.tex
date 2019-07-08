@@ -1,0 +1,51 @@
+\begin{tikzpicture}
+\begin{axis}[ticklabel style={{font=\small}}, major tick length={2pt}, every tick/.style={{black, line cap=round}}, axis on top, legend style={{draw=none, font=\small, at={(0.03,0.03)}, anchor=south west, fill=none, legend cell align=left}}, xlabel={$\ell$}, xtick distance={1}, ylabel={$\log_2(\mathbb{E}[|\;\cdot\;|])$}]
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}]
+        table[row sep={\\}]
+        {
+            \\
+            0.0  -3.1466302107200423  \\
+            1.0  -3.079956545090513  \\
+            2.0  -2.9859751795050915  \\
+            3.0  -3.5766580750009256  \\
+        }
+        ;
+    \addlegendentry {$Q_{(\ell, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}, style={dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -7.939760632285269  \\
+            2.0  -10.70529679366713  \\
+            3.0  -11.723891012675912  \\
+            4.0  -12.202980725739577  \\
+            5.0  -16.59064657807662  \\
+            6.0  -18.830542222251527  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, 0)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}, style={densely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -8.187446745985167  \\
+            2.0  -9.383883744997751  \\
+            3.0  -11.669504151453156  \\
+            4.0  -13.68151465411851  \\
+            5.0  -19.634430559911394  \\
+            6.0  -19.053999101842145  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(0, \ell)}$}
+    \addplot[mark={*}, mark size={1pt}, line cap={round}, mark options={solid}, color={red}, style={loosely dotted}]
+        table[row sep={\\}]
+        {
+            \\
+            1.0  -9.536718315322254  \\
+            2.0  -11.157400726339889  \\
+            3.0  -13.203788712954575  \\
+        }
+        ;
+    \addlegendentry {$\Delta Q_{(\ell, \ell)}$}
+\end{axis}
+\end{tikzpicture}
