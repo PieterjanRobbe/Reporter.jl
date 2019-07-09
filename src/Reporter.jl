@@ -22,14 +22,14 @@ function report(h::History)
 	report(h, folder)
 end
 
-function report(h::History, folder::AbstractString)
+function report(h::History, folder::AbstractString;include_preamble=false)
 
 	# make the required directories
 	!isdir(folder) && mkdir(folder)
 	!isdir(joinpath(folder,"figures")) && mkdir(joinpath(folder,"figures"))
 
 	# make the figures
-	make_figures(h, folder)
+	make_figures(h, folder,include_preamble)
 
 	# make the html file
 	make_html(h, folder)
