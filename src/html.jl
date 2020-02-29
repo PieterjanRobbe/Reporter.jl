@@ -1,4 +1,4 @@
-function make_html(h, folder)
+function make_html(h, folder, png)
 
 	page = Vector{String}(undef, 0)
 	push!(page, "<html>")
@@ -13,37 +13,37 @@ function make_html(h, folder)
 	# TODO make a table with some options ...
 	
 	push!(page, h2("Estimated rates of expected value"))
-	push!(page, image("E"))
+	push!(page, image("E", png))
 	
 	push!(page, h2("Estimated rates of variance"))
-	push!(page, image("V"))
+        push!(page, image("V", png))
 	
 	haskey(h, :W) && push!(page, h2("Estimated rates of computational cost"))
-	haskey(h, :W)&& push!(page, image("W"))
+	haskey(h, :W)&& push!(page, image("W", png))
 	
 	push!(page, h2("Estimated rates of actual run time"))
-	push!(page, image("T"))
+        push!(page, image("T", png))
 	
 	h[:type] <: Estimator{<:ML} && push!(page, h2("Distribution of number of samples"))
-	h[:type] <: Estimator{<:ML} && push!(page, image("nb_of_samples"))
+	h[:type] <: Estimator{<:ML} && push!(page, image("nb_of_samples", png))
 	
 	push!(page, h2("Complexity: total run time vs requested RMSE"))
-	push!(page, image("run_time_requested"))
+	push!(page, image("run_time_requested", png))
 	
 	push!(page, h2("Complexity: total run time vs measured RMSE"))
-	push!(page, image("run_time_measured"))
+	push!(page, image("run_time_measured", png))
 	
 	haskey(h, :W) && push!(page, h2("Complexity: computational cost vs requested RMSE"))
-	haskey(h, :W) && push!(page, image("comp_cost_requested"))
+	haskey(h, :W) && push!(page, image("comp_cost_requested", png))
 	
 	haskey(h, :W) && push!(page, h2("Complexity: computational cost vs measured RMSE"))
-	haskey(h, :W) && push!(page, image("comp_cost_measured"))
+	haskey(h, :W) && push!(page, image("comp_cost_measured", png))
 	
 	1 < h[:ndims] ≤ 2 && push!(page, h2("Shape of the index set"))
-	1 < h[:ndims] ≤ 2 && push!(page, image("index_set"))
+	1 < h[:ndims] ≤ 2 && push!(page, image("index_set", png))
 	
 	h[:type] <: Estimator{<:AD} && 1 < h[:ndims] ≤ 2 && push!(page, h2("Adaptive construction of the index set"))
-	h[:type] <: Estimator{<:AD} && 1 < h[:ndims] ≤ 2 && push!(page, image("adaptive_index_set"))
+	h[:type] <: Estimator{<:AD} && 1 < h[:ndims] ≤ 2 && push!(page, image("adaptive_index_set", png))
 	
 	push!(page, "</body>")
 	push!(page, "</html>")
@@ -60,4 +60,4 @@ h2(str) = string("<h2>", str, "</h2>")
 
 p(str) = string("<p>", str, "</p>")
 
-image(str) = string("<center><img src='figures/", str, ".pdf' alt='", str, "' style='width:500px'></center>")
+image(str, png) = string("<center><img src='figures/", str, png ? ".png'" : ".pdf'"," alt='", str, "' style='width:500px'></center>")
