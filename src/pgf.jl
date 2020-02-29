@@ -36,6 +36,7 @@ end
 @pgf legend_style_south_east = {legend_style = "{draw=none, font=\\small, at={(0.97,0.03)}, anchor=south east, fill=none, legend cell align=left}"}
 @pgf legend_style_north_west = {legend_style = "{draw=none, font=\\small, at={(0.03,0.97)}, anchor=north west, fill=none, legend cell align=left}"}
 @pgf legend_style_north_east = {legend_style = "{draw=none, font=\\small, at={(0.97,0.97)}, anchor=north east, fill=none, legend cell align=left}"}
+@pgf legend_style_outside = {legend_style = "{draw=none, font=\\small, at={(1.03,0.97)}, anchor=north west, fill=none, legend cell align=left}"}
 
 #
 # axis
@@ -60,7 +61,7 @@ end
 					 xtick_distance = "1",
 					 ylabel = L"N_\ell",
 					 ymode = "log",
-					 legend_style_north_east...
+					 legend_style_outside...
 					 }
 
 @pgf complexity_axis = {

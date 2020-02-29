@@ -12,14 +12,14 @@ include("figures.jl")
 
 include("html.jl")
 
-function report(name::AbstractString; include_preamble=false, png=true)
+function report(name::AbstractString; folder="", include_preamble=false, png=true)
     try
         @load name history
-        report(history, include_preamble=include_preamble, png=png)
+        report(history, folder=folder, include_preamble=include_preamble, png=png)
     catch e
         if e isa SystemError
             @load joinpath(pwd(), name) history
-            report(history, include_preamble=include_preamble, png=png)
+            report(history, folder=folder, include_preamble=include_preamble, png=png)
         end
     end
 end
